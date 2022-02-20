@@ -1,3 +1,3 @@
-module github.com/studiolampblack/casper-two-hugo
+module github.com/studiolampblack/hugo-casper-two
 
 go 1.17
