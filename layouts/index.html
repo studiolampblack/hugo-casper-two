@@ -7,7 +7,7 @@
 <main id="site-main" class="site-main outer" role="main">
   <div class="inner">
     <div class="post-feed">
-      {{ $paginator := .Paginate .Site.RegularPages }}
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
       {{ range $paginator.Pages }}
       {{ partial "post-card-set.html" . }}
       {{ end }}
