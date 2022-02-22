@@ -4,7 +4,7 @@
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-{{ with .Site.Params.googleAnalytics }}
+{{ if .Site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}
   {{ if (not .Site.IsServer) }}
   {{ template "_internal/google_analytics.html" . }}
