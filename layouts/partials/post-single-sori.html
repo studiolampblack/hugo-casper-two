@@ -5,6 +5,9 @@
                 <span class="date-divider">/</span> {{ range $index, $tag := .Params.tags }}{{if lt $index 2}}<a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;{{end}}{{end}}{{ end }}
         </section>
         <h1 class="post-full-title">{{.Title}}</h1>
+        {{- with .Params.Subtitle -}}
+        <h2 class="post-full-subtitle">{{ . }}</h2>
+        {{- end -}}
     </header>
     {{if .Params.image}}
     <figure class="post-full-image" style="background-image: url({{.Params.image | absURL}})">
