@@ -21,8 +21,11 @@
     {{ hugo.Generator }}
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
-    <link rel="stylesheet" type="text/css" href="{{ "built/screen.css" | absURL}}" /> 
-    <link rel="stylesheet" type="text/css" href="{{ "css/casper-two.css" | absURL}}" /> 
+	{{- $inServerMode	:= .Site.IsServer }}
+	{{- $cssTarget		:= "css/style.css" }}
+    {{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+	{{- $style := resources.Get "casper/casper.scss" | resources.ExecuteAsTemplate "scss/typographical.scss" . | toCSS $cssOptions | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
 
