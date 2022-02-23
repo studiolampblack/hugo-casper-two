@@ -1666,6 +1666,12 @@ body {
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
+}
+abbr {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  font-feature-settings: "c2sc";
 }
 .floating-header-share {
   -ms-flex-pack: end;
