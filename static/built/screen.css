@@ -140,7 +140,7 @@ img {
 }
 html {
   box-sizing: border-box;
-  font-family: "Source Serif", Georgia, "Times New Roman", Times, serif;
+  font-family: 'Source Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -630,6 +630,7 @@ body {
 .nav li {
   padding: 0;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .nav li,
 .nav li a {
@@ -791,8 +792,10 @@ body {
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .post-card-title {
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
   margin-top: 0;
 }
 .post-card-content {
@@ -804,6 +807,9 @@ body {
   flex-direction: column;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.post-card-excerpt {
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
 }
 .post-card-meta {
   padding: 0 25px 25px;
@@ -820,6 +826,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 @media (min-width: 795px) {
   .home-template .post-feed .post-card:nth-child(6n + 1):not(.no-image) {
@@ -914,6 +921,7 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .post-full-meta-date {
   color: #3eb0ef;
@@ -921,6 +929,7 @@ body {
 .post-full-title {
   margin: 0;
   color: #090a0b;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
 }
 .date-divider {
   display: inline-block;
@@ -950,6 +959,7 @@ body {
   margin: 0 auto;
   padding: 70px 100px 0;
   min-height: 230px;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 2.2rem;
   line-height: 1.6em;
   background: #fff;
@@ -1290,6 +1300,7 @@ body {
   letter-spacing: 0.2px;
   text-align: left;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   background-color: #f4f8fb;
 }
 .post-full-content table td,
@@ -1816,6 +1827,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin: 0 0 10px;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
 }
 .site-header-content .author-location svg {
@@ -1933,6 +1945,7 @@ body {
 .subscribe-overlay-description {
   margin: 0 auto 50px;
   max-width: 650px;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 3rem;
   line-height: 1.3em;
   font-weight: 300;
