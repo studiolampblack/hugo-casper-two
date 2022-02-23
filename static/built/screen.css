@@ -1587,6 +1587,8 @@ body {
   font-weight: 500;
   vertical-align: top;
   transition: opacity 0.3s ease;
+  font-family: 'Source Serif', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
 }
 .read-next-card-content li:first-of-type a {
   padding-top: 10px;
